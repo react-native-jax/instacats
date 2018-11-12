@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import PostCard from '../components/PostCard';
 
 class HomeScreen extends React.Component {
   render() {
@@ -13,11 +14,7 @@ class HomeScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Image style={styles.image} source={{ uri: post.imageUrl }} />
-        <Text style={styles.description}>
-          <Text style={styles.authorName}>{post.author.username} </Text>
-          {post.description}
-        </Text>
+        <PostCard post={post} />
       </View>
     );
   }
@@ -26,16 +23,6 @@ class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  image: {
-    width: '100%',
-    aspectRatio: 1,
-  },
-  description: {
-    padding: 10,
-  },
-  authorName: {
-    fontWeight: '700',
   },
 });
 
