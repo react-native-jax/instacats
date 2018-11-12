@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import PostCard from '../components/PostCard';
 
 class HomeScreen extends React.Component {
@@ -14,9 +14,11 @@ class HomeScreen extends React.Component {
     };
 
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <PostCard post={post} />
-      </View>
+        <PostCard post={post} />
+        <PostCard post={post} />
+      </ScrollView>
     );
   }
 }
