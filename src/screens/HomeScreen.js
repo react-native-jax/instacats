@@ -9,6 +9,7 @@ class HomeScreen extends React.Component {
       description: 'Cute cat!!!',
       author: {
         username: 'joe',
+        avatarUrl: 'https://loremflickr.com/50/50/person',
       },
     };
 
